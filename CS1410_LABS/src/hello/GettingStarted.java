@@ -7,7 +7,6 @@ public class GettingStarted {
 		String myName = "Davis";
 		System.out.println("Hi, I am " + myName + ".");
 		System.out.println("\"By changing nothing, nothing changes.\" --Tony Robbins ");
-		// Did this work?
 	}
 
 }
