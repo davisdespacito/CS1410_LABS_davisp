@@ -4,7 +4,7 @@ public class ForLoops {
 
 	public static void main(String args[]) {
 		
-		for (int i = 5; i > -5; i = i - 3) {
+		for (int i = 1; i <= 19; i += 6) {
 			
 			System.out.printf("%d ", i);
 			
