@@ -6,7 +6,7 @@ public class ForLoops {
 		
 		for (int i = 5; i > -5; i = i - 3) {
 			
-			System.out.printf("i: %d%n", i);
+			System.out.printf("%d ", i);
 			
 		}
 		
