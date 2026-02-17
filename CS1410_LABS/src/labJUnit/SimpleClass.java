@@ -15,6 +15,10 @@ public class SimpleClass {
     * @throws IllegalArgumentException if year is not positive. 
     */
     public static boolean isLeapYear(int year) {
+    	
+    	if (year < 0)
+    		throw new IllegalArgumentException("Year must be positive.");
+    	
        return false; // TODO
     }
 }
