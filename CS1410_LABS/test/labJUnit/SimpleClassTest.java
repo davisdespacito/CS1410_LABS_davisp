@@ -8,7 +8,7 @@ class SimpleClassTest {
 
 	@Test
 	void testIsLeapYear() {
-		fail("Not yet implemented");
+		fail("Not yet implemented"); 
 	}
 
 }
