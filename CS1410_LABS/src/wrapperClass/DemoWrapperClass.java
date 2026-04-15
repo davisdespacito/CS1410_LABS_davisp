@@ -10,6 +10,8 @@ import java.util.Random;
  */
 public class DemoWrapperClass {
 
+	private static final Random random = new Random();
+	
 	/**
 	 * Dynamically grabs the min/max of the 6 number wrapper types, and displays
 	 * both the max and the min
@@ -99,7 +101,7 @@ public class DemoWrapperClass {
 		int max = 999;
 		int min = 100;
 
-		int result = (int) (min + Math.random() * (max - min));
+		int result = min + random.nextInt(max - min + 1);
 		return result;
 	}
 
@@ -151,7 +153,7 @@ public class DemoWrapperClass {
 
 		System.out.println(Arrays.deepToString(numberArray) + " .. sum = " + parseSum(numberArray));
 
-		getRandomThreeDigitNumber();
+		System.out.println(getRandomThreeDigitNumber());
 	}
 
 }
