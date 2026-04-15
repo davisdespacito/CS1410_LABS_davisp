@@ -36,6 +36,7 @@ public class DemoWrapperClass {
 	}
 
 	/**
+	 * Shows an int, <code>input</code>, in Base 10, 16, 8, and 2 (binary)
 	 * 
 	 * @param input
 	 * @return formatted String, containing the number as the expected base(s)
@@ -166,9 +167,6 @@ public class DemoWrapperClass {
 
 		System.out.println(Arrays.deepToString(numberArray) + " .. sum = " + parseSum(numberArray));
 
-		System.out.println(getRandomThreeDigitNumber());
-
-		System.out.println(getRandomLetter());
 	}
 
 }
