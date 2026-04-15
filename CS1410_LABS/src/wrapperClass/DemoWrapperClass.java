@@ -10,8 +10,11 @@ import java.util.Random;
  */
 public class DemoWrapperClass {
 
+	/**
+	 * Random object <code>random</code> that will be used for both random methods
+	 */
 	private static final Random random = new Random();
-	
+
 	/**
 	 * Dynamically grabs the min/max of the 6 number wrapper types, and displays
 	 * both the max and the min
@@ -41,7 +44,7 @@ public class DemoWrapperClass {
 
 		return String.format(
 
-				"%-7s  %-7s  %-7s  %-7s", Integer.toString(input, 10), Integer.toString(input, 16),
+				"%-7s  %-7s  %-7s  %s", Integer.toString(input, 10), Integer.toString(input, 16),
 				Integer.toString(input, 8), Integer.toBinaryString(input)
 
 		);
@@ -93,7 +96,8 @@ public class DemoWrapperClass {
 	}
 
 	/**
-	 * Generates and returns a random 3-digit number as an <code>int</code>
+	 * Generates and returns a random 3-digit number as an <code>int</code>, using a
+	 * private, final, static Random object named <code>random</code>
 	 * 
 	 * @return random 3-digit number as <code>int</code>
 	 */
@@ -110,8 +114,18 @@ public class DemoWrapperClass {
 	 * @return
 	 */
 	public static char getRandomLetter() {
-		// TODO
-		return 0;
+
+		int result;
+
+		int upperOrLower = random.nextInt(2);
+		if (upperOrLower == 1) {
+			result = random.nextInt(26) + 65;
+		} else {
+			result = random.nextInt(26) + 97;
+		}
+
+		return ((char) result);
+
 	}
 
 	/**
@@ -119,7 +133,6 @@ public class DemoWrapperClass {
 	 *
 	 */
 	public static void main(String[] args) {
-		Random rand = new Random();
 
 		// Method minMax:
 		System.out.println(minMax());
@@ -148,12 +161,14 @@ public class DemoWrapperClass {
 
 		String[] wholeNumbers = new String[10];
 		for (int i = 0; i < wholeNumbers.length; i++) {
-			wholeNumbers[i] = "" + (rand.nextInt(90) + 10);
+			wholeNumbers[i] = "" + (random.nextInt(90) + 10); // Changed "rand" to "random"
 		}
 
 		System.out.println(Arrays.deepToString(numberArray) + " .. sum = " + parseSum(numberArray));
 
 		System.out.println(getRandomThreeDigitNumber());
+
+		System.out.println(getRandomLetter());
 	}
 
 }
