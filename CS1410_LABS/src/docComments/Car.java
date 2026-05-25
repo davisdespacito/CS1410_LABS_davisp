@@ -5,7 +5,6 @@ public class Car {
 	private String make;
 	private String model;
 	private int mpg;
-	private Car car;
 	
 	public Car(String make, String model, int mpg) {
 		//TODO

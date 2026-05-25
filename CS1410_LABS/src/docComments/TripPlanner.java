@@ -4,11 +4,19 @@ package docComments;
  * 
  */
 public class TripPlanner {
-	
+
 	private String departure;
 	private String arrival;
 	private int distance;
-	
+	private Car car;
+
+	public static void main(String[] args) {
+
+		Car m4 = new Car("BMW", "M4", 25);
+		Car civic = new Car("Honda", "Civic", 42);
+
+	}
+
 	/**
 	 * 
 	 * @param departure
@@ -17,23 +25,23 @@ public class TripPlanner {
 	 * @param car
 	 */
 	public TripPlanner(String departure, String arrival, int distance, Car car) {
-		
-		//TODO
-	
+
+		// TODO
+
 	}
-	
+
 	public double fuelConsumption() {
-		//TODO
+		// TODO
 		return 0;
 	}
-	
+
 	/**
 	 * 
 	 */
 	@Override
 	public String toString() {
-		//TODO
-		return null;
+		// TODO
+		return car.getMake() + " " + car.getModel() + " " + car.getMpg() + "mpg %n";
 	}
 
 }
